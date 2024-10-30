@@ -346,7 +346,6 @@ void Viewport::draw()
 			
 			int posX = ftoi(i->x) - 3;
 			int posY = ftoi(i->y) - 3;
-			
 			if(game.settings.shadow
 			&& w.shadow)
 			{

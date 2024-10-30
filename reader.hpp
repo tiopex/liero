@@ -90,7 +90,10 @@ inline Sint32 readSint16(FILE* f)
 {
 	unsigned char temp[2];
 	fread(temp, 1, 2, f);
-	return temp[0] + (static_cast<char>(temp[1]) << 8);
+	
+	int16_t result = temp[0] | (temp[1] << 8);
+
+	return result;
 }
 
 inline Uint32 readUint32(FILE* f)
